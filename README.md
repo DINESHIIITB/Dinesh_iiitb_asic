@@ -34,4 +34,4 @@ sudo apt-get install build-essential clang bison flex \
 make 
 sudo make install
 Below is the screenshot showing sucessful installation:
-```![Screenshot from 2023-07-31 09-58-15](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3bc5bc7d-3e10-4325-9d53-f5e19cfdfff5)
+![Screenshot from 2023-07-31 09-58-15](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3bc5bc7d-3e10-4325-9d53-f5e19cfdfff5)
