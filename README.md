@@ -43,6 +43,7 @@ I installed iverilog using the following command:
 sudo apt-get install iverilog
 ```
 Below is the screenshot showing successful launch:
+	
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f8c4f07e-8666-4cd9-ab5a-d8b110b8da0b)
 
 </details>
