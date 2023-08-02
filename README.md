@@ -61,5 +61,29 @@ Below is the screenshot showing successful launch
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/49a03a90-80f9-4a97-bec4-5153133ba204)
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/19e8e91c-9507-4839-bdb1-72bbe02bcf34)
 
+</details>
+<details>
+<summary>
+    Ngspice
+</summary>
+
+ I downloaded the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and unpacked it using the following commands:
+ ```bash
+tar -zxvf ngspice-37.tar.gz
+cd ngspice-37
+mkdir release
+cd release
+../configure  --with-x --with-readline=yes --disable-debug
+make
+sudo make install
+ ```
+Below is the screenshot showing sucessful installation:
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/37ee8c57-5007-4cc0-a046-9a4967a8e040)
+
+
+
+
 
 
