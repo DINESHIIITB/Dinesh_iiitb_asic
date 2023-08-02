@@ -53,13 +53,15 @@ Below is the screenshot showing successful launch:
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f8c4f07e-8666-4cd9-ab5a-d8b110b8da0b)
 
 
-### **GTKWave**
 
 </details>
 <details>
 <summary>
     gtkwave
 </summary>
+
+### **GTKWave**
+
 I installed gtkwave using the following command:
 
 ```
