@@ -17,6 +17,7 @@ I installed the needed tools.
  <details>
  <summary> Yosys </summary>
 
+### **YOSYS**
 
  I installed Yosys using the following commands:
 ```bash
@@ -33,11 +34,16 @@ sudo make install
 Below is the screenshot showing sucessful installation:
 
 ![Screenshot from 2023-07-31 09-58-15](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3f61c7b7-3433-4971-91dc-dc036abd6afa)
+
+
 </details>
 <details>
     <summary>
     iverilog 
     </summary>
+
+### **iVerilog**
+
 I installed iverilog using the following command:
 ```
 sudo apt-get install iverilog
@@ -45,6 +51,9 @@ sudo apt-get install iverilog
 Below is the screenshot showing successful launch:
 	
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f8c4f07e-8666-4cd9-ab5a-d8b110b8da0b)
+
+
+### **GTKWave**
 
 </details>
 <details>
@@ -67,6 +76,9 @@ Below is the screenshot showing successful launch
     Ngspice
 </summary>
 
+
+### **NgSpice**
+
  I downloaded the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory and unpacked it using the following commands:
  ```bash
 tar -zxvf ngspice-37.tar.gz
@@ -86,6 +98,7 @@ Below is the screenshot showing sucessful installation:
  <details>
  <summary> OpenSTA </summary>
 
+### **OpenSTA**
 
  I installed and built OpenSTA (including the needed packages) using the following commands:
  ```
@@ -105,6 +118,7 @@ Below is the screenshot showing sucessful installation:
  <summary> magic </summary>
 
  
+### **Magic**
 
  I installed magic using the following commands:
   ```bash
@@ -126,7 +140,10 @@ sudo apt-get install libncurses-dev
  <details>
  <summary> Openlane
  </summary>
-	 
+
+
+### **Openlane**
+
 Prior to the installation of the OpenLane install the dependencies and packages using the command shown below :</br>
 ``` 
 sudo apt-get update
