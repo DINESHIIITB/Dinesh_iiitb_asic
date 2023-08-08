@@ -4,6 +4,8 @@
 [Day 0](#day-0)
 
 
+[Day 1](#day-0)
+
 
 ## Day 0
 
@@ -181,6 +183,44 @@ make
 make test
 ```
 
+## Day 1
+
+###**Introduction to Verilog RTL Design and Synthesis**
+
+**Steps to download the lab folder**</br>
+```
+mkdir vlsi
+cd vlsi
+git clone https://github.com/kunalg123/vsdflow.git
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+```
+
+<details>
+ <summary> Summary </summary>
+
+I first synthesized a multiple module (made of two submodules) at the multiple module level (both in hierarchical and flattened forms) then at the submodule level. Synthesis at the submodule level is important for two reasons: 1-) when we have multiple instances of same module (we synthesize once and replicate this netlist multiple times and stitch together the replicas to get the multiple module netlist, and 2-) when we want to divide and conquer (in massive designs) so that the tool can generate a portion by portion of the overall netlist and then we can stitch together the netlist portions to get the multiple module netlist.After that, I sumulated the different flop designs using iverilog and gtkwave, then synthesized the designs.
+Finally, I synthesized 2 designs that were special; their synthesis used optimizations.
+
+
+
+</details>	
+	
+<details>
+ <summary> Verilog codes </summary>
+The verilog codes for good_mux.v are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+		
+I used the following commands to synthesize and view the design of the hierarchical multiple module:
+		
+```bash		
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: multiple_modules.v>
+yosys> synth -top <name: multiple_modules>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: multiple_modules>
+yosys> write_verilog -noattr <name: multiple_modules_hier.v>
+```
+Below is the screenshot of the generated hierarchical design:
 
 
 
