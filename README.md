@@ -181,46 +181,95 @@ cd OpenLane
 make
 make test
 ```
+</details>
 
-## Day 1
+## Day-1
 
-###**Introduction to Verilog RTL Design and Synthesis**
 
-**Steps to download the lab folder**</br>
-```
+
+<details>
+ <summary> Summary </summary>
+
+This section shows how I simulated and synthesized a good_mux using iverilog and yosys respectively. iverilog generates from the RTL design and its testbench a value changing dump file (vcd). gtkwave is the tool used to plot the simulation results of the design. Yosys is a tool which synthesizes RTL designs into a netlist. It is also used to test the synthesized netlist when we provide it with a testbench.
+
+</details>
+
+
+<details>
+ <summary> Steps to clone the repository </summary>
+
+steps to clone the repository:
+```bash
 mkdir vlsi
 cd vlsi
 git clone https://github.com/kunalg123/vsdflow.git
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ```
 
-
-<details>
- <summary> Summary </summary>
-
-This section shows how I simulated and synthesized a 2x1 mux using iverilog and yosys respectively. iverilog generates from the RTL design and its testbench a value changing dump file (vcd). gtkwave is the tool used to plot the simulation results of the design. Yosys is a tool which synthesizes RTL designs into a netlist. It is also used to test the synthesized netlist when we provide it with a testbench.
-
-
-
 </details>	
-	
+
+
 <details>
  <summary> Verilog codes </summary>
 The verilog codes for good_mux.v are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 
+
+</details>
+
+ <details>
+ <summary> Simulation: iverilog and gtkwave </summary>
+
+ 
+ I used the following commands to simulate and view the plots of the RTL design:
+	
+ ```bash
+ iverilog <name verilog: good_mux.v> <name testbench: tb_good_mux.v>
+ ./a.out
+ gtkwave tb_good_mux.vcd
+ ```
+	
+ Below is the screenshot of the gtkwave plots:
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7c4f28ad-dae6-41e0-a321-e3f71c1d2d9e)
+
+
 		
 I used the following commands to synthesize and view the design of the hierarchical multiple module:
 		
-```bash		
-yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
-yosys> read_verilog <name of verilog file: multiple_modules.v>
-yosys> synth -top <name: multiple_modules>
-yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
-yosys> show <name: multiple_modules>
-yosys> write_verilog -noattr <name: multiple_modules_hier.v>
-```
-Below is the screenshot of the generated hierarchical design:
+
+ </details>
+
+<details>
+ <summary> Synthesis: Yosys </summary>
+	
+ In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
+	
+ ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+In ABC step we need  to confirm the inputs ,outputs ,internal signals
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/bca8905e-0328-435f-a307-e6587a7e009f)
+
+ Below is the screenshot of the synthesized design:
+ 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/0ff98c30-221b-45f5-93cb-4ddff06ef960)
 
 
+ I used the following commands to generate the netlist:
+ ```bash
+ yosys> write_verilog <file_name_netlist.v>
+ yosys> write_verilog -noattr <file_name_netlist.v>
+ ```
+ 
+ Below is the screenshot of the generated netlist:
+ 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9e504712-1872-4e99-be94-ed7ba7e466f0)
+
+ 
+</details>
 
 
