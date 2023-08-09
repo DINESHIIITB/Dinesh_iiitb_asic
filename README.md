@@ -369,6 +369,26 @@ yosys flatten is used to write flat netlist
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/c388013c-7f63-423f-be61-4c01008775c0)
 
+Executing show command after flatten, we can see the hierarchical design that does not contains submodule 1 and submodule 2
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/338fcc42-0693-4113-9677-aee72499e24d)
+
+
+submodule level synthesis
+If we instantiate the same sub module so many times, then iit is not required to synthesise the same module every time so we use sub module level synthesis
+If we have very big module then it is very difficult to synthesise the whole module so we synthesise sub modules 
+
+sub module1
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f8d27e0a-b8d3-4347-88ef-c6c021568349)
+
+</details>
+
+
+
+
+
+
 
 
 
