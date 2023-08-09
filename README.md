@@ -3,8 +3,7 @@
 
 [Day 0](#day-0)
 
-
-[Day 1](#day-0)
+[Day 1](#day-1)
 
 
 ## Day 0
@@ -195,11 +194,11 @@ git clone https://github.com/kunalg123/vsdflow.git
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ```
 
+
 <details>
  <summary> Summary </summary>
 
-I first synthesized a multiple module (made of two submodules) at the multiple module level (both in hierarchical and flattened forms) then at the submodule level. Synthesis at the submodule level is important for two reasons: 1-) when we have multiple instances of same module (we synthesize once and replicate this netlist multiple times and stitch together the replicas to get the multiple module netlist, and 2-) when we want to divide and conquer (in massive designs) so that the tool can generate a portion by portion of the overall netlist and then we can stitch together the netlist portions to get the multiple module netlist.After that, I sumulated the different flop designs using iverilog and gtkwave, then synthesized the designs.
-Finally, I synthesized 2 designs that were special; their synthesis used optimizations.
+This section shows how I simulated and synthesized a 2x1 mux using iverilog and yosys respectively. iverilog generates from the RTL design and its testbench a value changing dump file (vcd). gtkwave is the tool used to plot the simulation results of the design. Yosys is a tool which synthesizes RTL designs into a netlist. It is also used to test the synthesized netlist when we provide it with a testbench.
 
 
 
