@@ -5,6 +5,9 @@
 
 [Day 1](#day-1)
 
+[Day 2](#day-2)
+
+
 
 ## Day 0
 
@@ -210,9 +213,8 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 
 
 <details>
- <summary> Verilog codes </summary>
+ <summary> good_mux </summary>
 The verilog codes for good_mux.v are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-
 
 </details>
 
@@ -271,5 +273,73 @@ In ABC step we need  to confirm the inputs ,outputs ,internal signals
 
  
 </details>
+
+## Day 2
+
+### **Introduction to timing.libs**
+
+
+<details>
+ <summary> sky130_fd_sc_hd__tt_025C_1v80 </summary>
+
+ The sky130_fd_sc_hd__tt_025C_1v80 name tells us that it is 130nm library and tt stands for typical, 025c is temperature,1v80 is voltage
+ P-process
+ V-volatge
+ T-temperature
+	
+ ```bash
+gvim  sky130_fd_sc_hd__tt_025C_1v80.lib
+
+ ```
+</details>
+
+
+<details>
+ <summary>multiple_modules </summary>
+The verilog codes for good_mux.v are taken from https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+</details>
+
+ <details>
+ <summary> Simulation: iverilog and gtkwave </summary>
+
+ 
+ I used the following commands to simulate and view the plots of the RTL design:
+	
+ ```bash
+ iverilog <name verilog:multiple_modules.v> <name testbench: tb_multiple_modules.v>
+ ./a.out
+ gtkwave tb_multiple_modules.vcd
+ ```
+ Below is the screenshot of the gtkwave plots:
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/0f00fc74-e11f-4cdc-b901-f3e574e0b773)
+
+		
+I used the following commands to synthesize and view the design of the hierarchical multiple module:
+		
+
+ </details>
+
+<details>
+ <summary> Synthesis: Yosys </summary>
+	
+ In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
+	
+ ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+In ABC step we need  to confirm the inputs ,outputs ,internal signals
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9fbd25e7-4164-4883-826e-fd463c2cb3ae)
+
+
+
+
 
 
