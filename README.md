@@ -263,7 +263,7 @@ In ABC step we need  to confirm the inputs ,outputs ,internal signals
 
  I used the following commands to generate the netlist:
  ```bash
- yosys> write_verilog <file_name_netlist.v>
+
  yosys> write_verilog -noattr <file_name_netlist.v>
  ```
  
@@ -333,10 +333,45 @@ yosys> synth -top <top_module_name>
 yosys> abc -liberty <path to lib file>
 yosys> show
  ```
+The synth -top<top_module_name> gives the detail information about design hierarchy,submodules and that has shown below
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/bcf3784b-ee05-43d5-b2b1-4a3f0b4fc11c)
+
 In ABC step we need  to confirm the inputs ,outputs ,internal signals
 
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/b92b2665-3da5-41f2-ac35-6e60c63cc30e)
 
- ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9fbd25e7-4164-4883-826e-fd463c2cb3ae)
+After executing show command , we can see the hierarchical design that contains submodule 1 and submodule 2
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/68546208-4af6-460f-a0d3-9e1d20a8bf58)
+
+
+
+I used the following commands to generate the netlist:
+ 
+ ```bash
+
+ yosys> write_verilog -noattr <file_name_netlist.v>
+ yosys> !gvim multiple_modules_heir.v
+ ```
+ 
+ Below is the screenshot of the generated netlist:
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/e3346dc9-cf32-46f4-aabf-2b7a2dea5f75)
+
+
+yosys flatten is used to write flat netlist
+```bash
+ yosys> flatten
+ yosys> write_verilog -noattr multiple_modules_flat.v>
+ yosys> !gvim multiple_modules_flat.v
+ ```
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/c388013c-7f63-423f-be61-4c01008775c0)
+
+
+
+
 
 
 
