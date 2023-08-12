@@ -583,8 +583,9 @@ In statistics there is no dfliplfop and the design was matching with the statist
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/0e498cf0-1cd8-46c9-bd55-a3ac21aff22f)
 
 
-
  **dff_const3**
+
+ 
 
  
 
