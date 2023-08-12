@@ -448,14 +448,14 @@ To perform multiplication we dont need hardware because we are adding zeores to 
 **Combinational and Sequential Optimizations**
  
 <details>
- <summary>  </summary>
-
-	
+ <summary> Introducation </summary>
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/49a0095f-f330-47e6-b313-8c02940a1849)
 
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/1cbbef40-d954-469a-88af-9e3bfa253dbf)
+
+</details>
 
 
 <details>
@@ -482,7 +482,6 @@ opt_clean -purge is used to removes unused wires and cells. Expecting and gate a
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/70f250d4-6ff0-4359-87c6-ad3f8daa5a4d)
 
 
-</details>
 
 **opt_check2**
 
@@ -512,6 +511,100 @@ Repeat the above following steps  and use flatten command before the opt_clean -
 **multiple_module_opt2**
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/c4a2878e-9357-4e73-bf7f-3f68dc92c8dd)
+
+</details>
+
+
+
+
+<details>
+ <summary> Sequential logic Optimizations  </summary>
+ 
+ **dff_const1**
+These are the sequential files using ,to display these sequential files,we need to give command in the directory of the verilog files
+```
+ls *dff*const*
+```
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/70bfff7a-143b-48c8-adc4-dd39a8e80d85)
+
+I used the following commands to simulate and view the plots of the RTL design:
+	
+ ```bash
+ iverilog dff_const1.v tb_dff_const1.v
+ ./a.out
+ gtkwave tb_dff_const1.vcd
+ ```
+The wave form clearly tells that it doesnt work like a inverter, the change in output will happen only at rsing edge of clock
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/33c1b13d-f6b6-42ec-9a51-2a8648e409a1)
+
+In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
+	
+ ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> dfflibmap -liberty ../lib/<path to the file>
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+In statistics s_dff_ppo has got 1.i,e there is one dflipflop. The commmand dfflibmap is used to tell the synthesizer, what library has to be picked
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/32bd35b3-a3d6-4f86-9a5f-78c0adfa4c71)
+
+ 
+ **dff_const2**
+
+ I used the following commands to simulate and view the plots of the RTL design:
+	
+ ```bash
+ iverilog dff_const2.v tb_dff_const2.v
+ ./a.out
+ gtkwave tb_dff_const2.vcd
+ ```
+In this circuit output is always 1,regardless of input
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3fcc9225-eb7e-4807-8163-11835f7b7e74)
+
+In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn,The commmand dfflibmap is used to tell the synthesizer, what library has to be picked
+	
+ ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> dfflibmap -liberty ../lib/<path to the file>
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+
+In statistics there is no dfliplfop and the design was matching with the statistics.we got the design as we expected, output is always one.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/0e498cf0-1cd8-46c9-bd55-a3ac21aff22f)
+
+
+
+ **dff_const3**
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 
