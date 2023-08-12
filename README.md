@@ -461,7 +461,7 @@ To perform multiplication we dont need hardware because we are adding zeores to 
 <details>
  <summary> Combinational logic Optimizations  </summary>
 	
-**AND Gate**
+**opt_check**
 
  In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
 	
@@ -484,11 +484,41 @@ opt_clean -purge is used to removes unused wires and cells. Expecting and gate a
 
 </details>
 
-**OR gate**
+**opt_check2**
 
-Repeat the above steps that has done for OR gate.Expecting OR gate and got OR gate
+Repeat the above following steps .Expecting OR gate and got OR gate
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3ffb8f3d-01fc-4cc5-86bf-aac06cfa95b3)
+
+**opt_check3**
+
+Repeat the above following steps .Expecting 3 input and gate and got 3 input and gate.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f18c0591-1567-47e7-8598-f26fa50ba86b)
+
+
+**opt_check4**
+
+Repeat the above following steps .Expecting xnor between a and c input and got xnor gate.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/8f8b9d85-71b5-4adf-9b93-bf06b8c735e1)
+
+**multiple_module_opt**
+
+Repeat the above following steps  and use flatten command before the opt_clean -purge
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/aabc0f09-4c21-4a55-9205-47381ac107e1)
+
+**multiple_module_opt2**
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/c4a2878e-9357-4e73-bf7f-3f68dc92c8dd)
+
+
+
+
+
+
+
 
 
 
