@@ -7,6 +7,7 @@
 
 [Day 2](#day-2)
 
+[Day 3](#day-3)
 
 
 ## Day 0
@@ -440,6 +441,56 @@ To perform multiplication we dont need hardware because we are adding zeores to 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/869032e6-1760-4a1a-9f4e-4e4c64017692)
 
 </details>
+
+
+## Day 3
+
+**Combinational and Sequential Optimizations**
+ 
+<details>
+ <summary>  </summary>
+
+	
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/49a0095f-f330-47e6-b313-8c02940a1849)
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/1cbbef40-d954-469a-88af-9e3bfa253dbf)
+
+
+<details>
+ <summary> Combinational logic Optimizations  </summary>
+	
+**AND Gate**
+
+ In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn:
+	
+ ```bash
+ls *opt_check*
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> opt_clean -purge
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+ls opt_check is used to find out what are the opt check files we are using.
+opt_clean -purge is used to removes unused wires and cells. Expecting and gate and we got and gate.
+
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/70f250d4-6ff0-4359-87c6-ad3f8daa5a4d)
+
+
+</details>
+
+**OR gate**
+
+Repeat the above steps that has done for OR gate.Expecting OR gate and got OR gate
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3ffb8f3d-01fc-4cc5-86bf-aac06cfa95b3)
+
+
 
 
 
