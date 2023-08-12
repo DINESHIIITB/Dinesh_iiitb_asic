@@ -385,6 +385,30 @@ sub module1
 </details>
 
 
+asyncres
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/43b36e6b-5649-4d92-aac9-51aaa82de919)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/411bae3a-1ea3-43ac-8167-f8a5fe2aed2a)
+
+
+asyncset
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f2e2a12e-637b-4d52-bd7e-be4b60a2892c)
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/38af5112-fb5c-4bbf-a69e-033b22264eaa)
+
+
+syncres
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/388ac745-efb7-4147-acaa-ead4acde6d9f)
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/74f0e5ae-0864-4a31-a2eb-0788561c0621)
+
+
+
+
+
+
 
 
 
