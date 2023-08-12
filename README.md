@@ -405,6 +405,22 @@ syncres
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/74f0e5ae-0864-4a31-a2eb-0788561c0621)
 
 
+mult 2
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/41f3eca2-a2b0-47a3-80b0-a719a071679e)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/d792f082-8ee3-4b45-a4dc-12f56ea2ffd7)
+
+
+mult8
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/1b29a38d-e039-4090-9a7b-d607f8930c1c)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/869032e6-1760-4a1a-9f4e-4e4c64017692)
+
+
+
+
+
+
 
 
 
