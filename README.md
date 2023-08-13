@@ -735,7 +735,7 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
   
 ### Caveats with Case statement
 
-1. Incomplete Case statements
+* Incomplete Case statements causes infered latches,to avoid latches use defualt statement in case.
 
   
 
