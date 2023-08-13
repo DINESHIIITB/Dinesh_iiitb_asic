@@ -9,6 +9,8 @@
 
 [Day 3](#day-3)
 
+[Day 4](#day-4)
+
 
 ## Day 0
 
@@ -624,7 +626,6 @@ In the directory of the verilog files, I used the above commands to synthesize a
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7b3e8754-6c91-472b-b68b-8f04d3b3decb)
 
 
-
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f1a248ec-b350-4960-8290-7f2279751828)
 
 before we are using one bit of the output ,now we changed the code to use all three bits and verifying the design is using three flip flops are not, as we expected the other two flops are not getting optimized.
@@ -634,9 +635,88 @@ before we are using one bit of the output ,now we changed the code to use all th
 
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/db22b6e6-e903-4803-a0c8-69400d96294b)
 
-
-
  </details>
+ 
+## Day 4
+
+<details>
+ <summary> GLS,Synthesis simulation mismatches </summary>
+	
+GLS-Running the testbench with netlist as design under test,Normally we use RTL code to run the testbench.
+* Netlist is logically same as RTL code ,so we will be getting the same output. 
+
+
+
+ <img src="https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/e6ecbc49-2419-4748-8b83-ec662f178f9e" alt="Image" width="500" height="400">
+ 
+ ### synthesis simulation mismatch
+
+ 	Synthesis simulation mismatch happens bacuse of these three reasons
+  1. Missing sensitivity list
+  2. Wrong usage of blocking and non blocking assignments
+  3. Nonstandard verilog coding
+
+* always@(*)---> always will be evaluated when anysignal changes.
+* always@(signal)---->always block get evaluated when there is any change inthat signal.The change in the inputs doesnt affect the output if signal is not changing at that point ,so this  error is considered as missing sensitivity list.
+ 
+ ### Blocking and non blocking statements
+
+- '='---> Blocking
+	- used inside always block
+	- executes the statements in order
+
+- '<='---> Non Blocking
+	- used inside always block
+ 	- executes all the RHS first then assigns it to LHS
+ 	- parallel evaluation
+ 
+### Caveats with Blocking statements
+
+example 1:
+
+| ![Image 1](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/670eedb6-5019-49a2-bab6-b5f33d6b8436) | ![Image 2](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f35dfcaf-86b4-41d5-8d16-3f0ec87c82e5) |
+|:---:|:---:|
+| two flops will be created | only one flop will be created ,i.e q is assigned d  |
+
+- while using blocking statements we should be careful ,wrong order changes the circuit and give wrong output.In the above circuit if we use non blocking assignment, order doesnt matter  because RHS executes first and assignes to LHS so it wikkl create two memory locations,tow flops will be created
+ </details>
+
+<details>
+ <summary> Synthesis simulation mismatche </summary>
+	
+ I used the commands of iverilog to simulate and view the plots of the RTL design:
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/98d0077e-6b8e-4f36-95b9-dd2ab6a574d1)
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/aaf4644c-3ff2-41f9-b5e4-d816e68f406f)
+
+```
+iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+```
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9b90e624-c6c2-4dee-9f90-39f7c3d95e37)
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+ 
+
+  
+
+
+ 
 
  
 
