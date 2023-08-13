@@ -11,6 +11,8 @@
 
 [Day 4](#day-4)
 
+[Day 5](#day-5)
+
 
 ## Day 0
 
@@ -715,11 +717,12 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 ![Screenshot from 2023-08-13 21-15-29](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/eb7371e9-f53a-44e6-8816-9eb9e78172a9)
 
 
+ </details>
 
+## Day 5
 
-
-
-
+<details>
+ <summary> If,case,For,generate  </summary>
 
 
 
