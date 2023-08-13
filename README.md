@@ -724,6 +724,21 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 <details>
  <summary> If,case,For,generate  </summary>
 
+### Caveats with If statement
+
+1. Combiantional circuits
+   	* Latches should not occur.
+   	* Latches may occur due to incomplete if statements.
+2. Sequential circuits
+  	* Occuring latches is may or may not a bad thing
+
+  
+### Caveats with Case statement
+
+1. Incomplete Case statements
+
+  
+
 
 
 
