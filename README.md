@@ -739,6 +739,17 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 * Assign all the outputs in segments of case.
 * We should not have overlapping case statements
 
+  </details>
+  
+<details>
+ <summary> labs on If statement  </summary>
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/ad74f9d5-e511-438e-81ad-3a3e27d880c3)
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/08bb95a7-cc27-4715-8110-4f6d7a6c7c93)
+
+
   
 
 
