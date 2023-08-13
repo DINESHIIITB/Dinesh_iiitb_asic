@@ -698,6 +698,27 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9b90e624-c6c2-4dee-9f90-39f7c3d95e37)
 
 
+ ![Screenshot from 2023-08-13 20-54-29](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/57455898-656f-4af4-9e19-0404390bcf2d)
+
+
+ ![Screenshot from 2023-08-13 21-01-03](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/92ec0d8c-7126-4165-9eef-46f562d5b6e8)
+
+ ![Screenshot from 2023-08-13 21-05-16](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7776bf7f-a132-409e-83d2-9904b722285e)
+
+
+ ![Screenshot from 2023-08-13 21-08-00](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/71506a3f-4dc0-4344-987f-70cf1338f68c)
+
+
+![Screenshot from 2023-08-13 21-12-09](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/279fc08a-634f-41e9-8d48-c3ec0960e3de)
+
+
+![Screenshot from 2023-08-13 21-15-29](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/eb7371e9-f53a-44e6-8816-9eb9e78172a9)
+
+
+
+
+
+
 
 
 
