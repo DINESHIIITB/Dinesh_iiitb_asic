@@ -585,6 +585,44 @@ In statistics there is no dfliplfop and the design was matching with the statist
 
  **dff_const3**
 
+
+ I used the commands of dff_const2 to simulate and view the plots of the RTL design:
+
+ we got the output as what we understood from the code ,except for one clock cycle the output is always on,
+ 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/fd0cef7c-5d70-45c6-ac22-0309464852eb)
+
+ In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn,The commmand dfflibmap is used to tell the synthesizer, what library has to be picked. and we can see from the statistics the both flipflops are present and there no optimization has done to circuit.
+ 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/bbbbc629-687d-45cc-8b44-9cf3ed1a31a4)
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/65eb3267-a96d-41cc-abb6-a8ae7e917e15)
+
+
+ **dff_const4**
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/8b960c55-175c-49d1-af03-524bcb8f45e5)
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/d1612b3a-b429-4683-956e-f58a70f3c4aa)
+ 
+ **dff_const5**
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/1829e027-bac9-48f2-8483-e8aac981089a)
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/83c50943-f602-46db-b32e-36d5d3e46cd3)
+
+</details>
+ 
+<details>
+ <summary> Sequential logic Optimizations of unused ports  </summary>
+
+
+
+
+
+
  
 
  
