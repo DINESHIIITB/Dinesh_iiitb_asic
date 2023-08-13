@@ -586,7 +586,7 @@ In statistics there is no dfliplfop and the design was matching with the statist
  **dff_const3**
 
 
- I used the commands of dff_const2 to simulate and view the plots of the RTL design:
+ I used the above commands of iverilog to simulate and view the plots of the RTL design:
 
  we got the output as what we understood from the code ,except for one clock cycle the output is always on,
  
@@ -617,6 +617,29 @@ In statistics there is no dfliplfop and the design was matching with the statist
  
 <details>
  <summary> Sequential logic Optimizations of unused ports  </summary>
+
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn,according the verilog code its a 3 bit counter ,so we require 3 flip flops ,but if we see the statisctics and netllist design there is only on eflip flop.for getiing the output we are using one flip flop thats why the other two flopsgot optimized .
+ 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7b3e8754-6c91-472b-b68b-8f04d3b3decb)
+
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f1a248ec-b350-4960-8290-7f2279751828)
+
+before we are using one bit of the output ,now we changed the code to use all three bits and verifying the design is using three flip flops are not, as we expected the other two flops are not getting optimized.
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/51717449-62ca-4467-af35-095889cf2d24)
+ 
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/db22b6e6-e903-4803-a0c8-69400d96294b)
+
+
+
+ </details>
+
+ 
+
 
 
 
