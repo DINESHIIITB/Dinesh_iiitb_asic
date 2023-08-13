@@ -736,6 +736,8 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 ### Caveats with Case statement
 
 * Incomplete Case statements causes infered latches,to avoid latches use defualt statement in case.
+* Assign all the outputs in segments of case.
+* We should not have overlapping case statements
 
   
 
