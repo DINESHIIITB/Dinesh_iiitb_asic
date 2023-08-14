@@ -817,7 +817,7 @@ In the directory of the verilog files, I used the above commands to synthesize a
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/d2d846de-8740-4502-ad5a-d788fadb2ebb)
 
   ### comp_case
-As we can from the wave form there is no latch and we are expecting no latch after synthesizing.
+ I used the commands of iverilog to simulate and view the plots of the RTL design.As we can from the wave form there is no latch and we are expecting no latch after synthesizing.
   
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/ac3606df-bf65-4556-8d45-cc211016a327)
 
@@ -827,6 +827,23 @@ In the directory of the verilog files, I used the above commands to synthesize a
 
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/ed684f68-eb2e-4030-8b4b-ad567660a2f0)
+
+
+  ### Partial_comp_case
+   I used the commands of iverilog to simulate and view the plots of the RTL design. and mux X is getting latched at sel 01, so we should get one latch in synthesis.
+  
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/94b81627-ca8a-4c62-ab8c-2100dec00343)
+
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn.Expecting one latch and got one latch.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/dc2dfa88-0cf3-4d80-bb23-39632cebdbc8)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/16d7b016-71bf-4f00-90fd-92c7eedc6d2c)
+
+
+
+
 
 
 
