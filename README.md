@@ -690,6 +690,17 @@ example 1:
 
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/98d0077e-6b8e-4f36-95b9-dd2ab6a574d1)
 
+  In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn,
+
+   ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> abc -liberty <path to lib file>
+yosys> write_verilog -noattr bad_mux_net.v
+yosys> show
+ ```
+
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/aaf4644c-3ff2-41f9-b5e4-d816e68f406f)
 
 ```
@@ -701,8 +712,13 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9b90e624-c6c2-4dee-9f90-39f7c3d95e37)
 
+### bad_mux
+
+I used the commands of iverilog to simulate and view the plots of the RTL design:
 
  ![Screenshot from 2023-08-13 20-54-29](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/57455898-656f-4af4-9e19-0404390bcf2d)
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn,
 
 
  ![Screenshot from 2023-08-13 21-01-03](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/92ec0d8c-7126-4165-9eef-46f562d5b6e8)
@@ -841,20 +857,71 @@ In the directory of the verilog files, I used the above commands to synthesize a
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/16d7b016-71bf-4f00-90fd-92c7eedc6d2c)
 
+  ### bad_case
+   I used the commands of iverilog to simulate and view the plots of the RTL design. simulator is getting confused when select is 11, so we are getting random output.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/292aad50-4c21-4013-b3ed-895610aaa30a)
 
 
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn.synthesis simulation mismatch because of overlapping case statements
 
-
-
-
-
-
-
-
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/70744013-e84b-4d10-b182-d153432841a0)
  
   </details>
 
 
+ <details>
+ <summary> For loop and for generate  </summary>
+
+ 1. For Loop
+	* Used inside always block
+ 2. For genearate
+  	* Used outside always block
+   	* Used to instantiate modules multiple times
+
+### mux_generate
+
+ ```
+ls *incomp*
+ iverilog mux_generate.v tb_mux_generate.v
+ ./a.out
+ gtkwave tb_mux_generate.vcd
+```
+Output came as expected.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/9b6750ea-014b-4727-b393-246b34cf9c06)
+
+In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn
+	
+ ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> write_verilog -noattr mux_generate_net.v
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/5a566c50-950b-4038-aa56-8ceff4473482)
+
+
+### demux_generate
+
+  I used the commands of iverilog to simulate and view the plots of the RTL design.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/105e6bb2-4fbf-486f-aaf3-5a360de35417)
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/1fddac29-359b-42f4-a75b-97d191170058)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/6f6f4b3d-066b-49ea-94c1-a973bcb69731)
+
+
+
+
+   </details>
 
 
 
