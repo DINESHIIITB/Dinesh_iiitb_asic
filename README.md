@@ -694,6 +694,8 @@ example 1:
 
 ```
 iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+ ./a.out
+ gtkwave tb_ternary_operator_mux.vcd
 ```
 
 
@@ -744,10 +746,102 @@ iverilog ../my_lib/verilog_model/primitives.v  ../my_lib/verilog_model/sky130_fd
 <details>
  <summary> labs on If statement  </summary>
 
+ to get the list of files for incompete files
+
+ ### incomp_if
+ ```
+ls *incomp*
+ iverilog incomp_if.v tb_incomp_if.v
+ ./a.out
+ gtkwave tb_incomp_if.vcd
+```
+
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/ad74f9d5-e511-438e-81ad-3a3e27d880c3)
 
+when i0 is low there is no change  in output,output is latching at that point,output is changing at i0 is high
 
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/08bb95a7-cc27-4715-8110-4f6d7a6c7c93)
+
+In the directory of the verilog files, I used the following commands to synthesize and view the synthesized deisgn.
+	
+ ```bash
+yosys> read_liberty -lib <path to lib file>
+yosys> read_verilog <path to verilog file>
+yosys> synth -top <top_module_name>
+yosys> abc -liberty <path to lib file>
+yosys> show
+ ```
+ 
+we see there is d latch, we are coding for mux and we are getting latch.These kind of latches are not accepted
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/88f6946b-fb4e-4589-84da-e5ea13a5d840)
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/c132ce2d-a35a-4cd5-88b3-bbe41af769e0)
+
+ ### incomp_if2
+
+ I used the commands of iverilog to simulate and view the plots of the RTL design.In this circuit we didnt give any input to lower bit of first mux. so when two muxs are low then the ouput will latch.we are expecting one latch because only one time latch is happening
+ 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/8fbdcf01-18f6-48f5-981d-bf9e2760c3f3)
+
+  In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn .as we expected we got one latch.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/74bd54cf-233b-41e6-9ac9-3e8bd3c370a3)
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/0d5fc49b-79cf-407d-ad38-977ec9c48bbc)
+
+ 
+  </details>
+
+ <details>
+ <summary> Labs on Incomplete overlapping case  </summary>
+
+  ### incomp_case
+ ```
+ls *incomp*
+ iverilog incomp_case.v tb_incomp_case.v
+ ./a.out
+ gtkwave tb_incomp_case.vcd
+```
+When select is 2 and 3 latching will occur because there in input given to 2 and 3.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/198c7bea-3cbb-403d-94eb-7aedd9eb3607)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/b76a8d10-a66c-467c-9a04-cbdd2f1dd3de)
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn .as we expected we got one latch.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7974d64c-9a9b-438f-96e6-cc825d48a301)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/d2d846de-8740-4502-ad5a-d788fadb2ebb)
+
+  ### comp_case
+As we can from the wave form there is no latch and we are expecting no latch after synthesizing.
+  
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/ac3606df-bf65-4556-8d45-cc211016a327)
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn .as we expected we didnt got latch.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/d0efd348-4b8b-48dc-a694-280203643153)
+
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/ed684f68-eb2e-4030-8b4b-ad567660a2f0)
+
+
+
+
+
+
+
+ 
+  </details>
+
+
+
+
+
+ 
 
 
   
