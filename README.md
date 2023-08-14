@@ -718,15 +718,22 @@ I used the commands of iverilog to simulate and view the plots of the RTL design
 
  ![Screenshot from 2023-08-13 20-54-29](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/57455898-656f-4af4-9e19-0404390bcf2d)
 
-In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn,
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn, and we can see that there is synthesis simulation mismatch.
 
 
  ![Screenshot from 2023-08-13 21-01-03](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/92ec0d8c-7126-4165-9eef-46f562d5b6e8)
 
  ![Screenshot from 2023-08-13 21-05-16](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/7776bf7f-a132-409e-83d2-9904b722285e)
 
+ 
+### blocking_caveat
+
+
+I used the commands of iverilog to simulate and view the plots of the RTL design:
 
  ![Screenshot from 2023-08-13 21-08-00](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/71506a3f-4dc0-4344-987f-70cf1338f68c)
+
+ In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn, and we can see that there is synthesis simulation mismatch.
 
 
 ![Screenshot from 2023-08-13 21-12-09](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/279fc08a-634f-41e9-8d48-c3ec0960e3de)
