@@ -925,6 +925,27 @@ In the directory of the verilog files, I used the above commands to synthesize a
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/6f6f4b3d-066b-49ea-94c1-a973bcb69731)
 
+### ripple_carry_adder
+
+* Rule of addition if the inputs are [N:0] bits ,the output will be [N+1:0] bits
+
+
+  I used the commands of iverilog to simulate and view the plots of the RTL design.
+
+```
+ls *incomp*
+ iverilog rca.v fa.v tb_rca.v
+ ./a.out
+ gtkwave tb_rca.vcd
+```
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/933bf1a9-8bfa-4af3-a640-804e0ec9d3e3)
+
+In the directory of the verilog files, I used the above commands to synthesize and view the synthesized deisgn ,simulation and synthesis both are matching.
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/c794b280-d921-43af-b980-ec992af87d0f)
+
+![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f467c2f5-a99b-4413-b2a4-ff64ce3ee183)
 
 
 
