@@ -947,12 +947,10 @@ In the directory of the verilog files, I used the above commands to synthesize a
 
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f467c2f5-a99b-4413-b2a4-ff64ce3ee183)
 
+</details>
 
 
-   </details>
-
-
-### References  
+## References  
 
     1. https://yosyshq.net/
     2. https://www.vsdiat.com/
