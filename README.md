@@ -644,8 +644,20 @@ before we are using one bit of the output ,now we changed the code to use all th
 <details>
  <summary> GLS,Synthesis simulation mismatches </summary>
 	
-GLS-Running the testbench with netlist as design under test,Normally we use RTL code to run the testbench.
-* Netlist is logically same as RTL code ,so we will be getting the same output. 
+### GLS (Gate-Level Simulation): 
+
+Gate-level simulation is a type of electronic circuit simulation that operates at the gate-level abstraction of a digital design. In digital design, a design description is typically created using a hardware description language (HDL) like Verilog or VHDL. This high-level description is then synthesized into gate-level representations, where logical gates (AND, OR, NOT, etc.) and flip-flops are used to implement the design's functionality.
+
+Gate-level simulation involves simulating the circuit at this lower level of abstraction. It helps to verify the correctness of the design after synthesis, ensuring that the gate-level representation behaves as expected and meets the design specifications. Gate-level simulations are crucial for detecting issues that might not be evident during high-level simulations, such as timing violations and signal propagation delays.
+
+
+### Synthesis Simulation: 
+
+Synthesis is the process of converting a high-level hardware description (e.g., written in Verilog or VHDL) into a gate-level representation using actual hardware components. Synthesis tools map the design's functionality into logical gates, flip-flops, and other components from a target technology library (e.g., an ASIC or FPGA library).
+
+Synthesis simulation, as you referred to it, could mean simulating the gate-level representation of a design after synthesis. This is a critical step in the digital design flow, as it helps ensure that the synthesis process was successful and that the gate-level design behaves as intended. Any discrepancies between the original high-level design and the gate-level representation can be identified and corrected during this phase.
+
+In summary, both gate-level simulation and synthesis simulation are important steps in digital design verification and validation, ensuring that the final hardware implementation matches the intended design behavior.
 
 
 
