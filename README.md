@@ -952,12 +952,12 @@ In the directory of the verilog files, I used the above commands to synthesize a
 
 ## References  
 
-    1. https://yosyshq.net/
-    2. https://www.vsdiat.com/
-    3. https://github.com/kunalg123/vsdflow
-    4. https://teamvlsi.com
-    5. https://www.linkedin.com/pulse/gate-level-simulation-comprehensive-overview-jerry-mcgoveran/
-    6. https://jerinjacobblog.wordpress.com/2020/07/20/gate-level-simulation-introduction/
+1. https://yosyshq.net/
+2. https://www.vsdiat.com/
+3. https://github.com/kunalg123/vsdflow
+4. https://teamvlsi.com
+5. https://www.linkedin.com/pulse/gate-level-simulation-comprehensive-overview-jerry-mcgoveran/
+6. https://jerinjacobblog.wordpress.com/2020/07/20/gate-level-simulation-introduction/
   
     
    
