@@ -16,8 +16,7 @@
 
 [week 1](#week_1)
 
-
-[Day 0](#day-0)
+[Day 6](#day-6)
  
 # week_0
 
@@ -970,7 +969,7 @@ In the directory of the verilog files, I used the above commands to synthesize a
 
 # week_1
 
-## Day_0
+## Day_6
 
 
 ## References  
