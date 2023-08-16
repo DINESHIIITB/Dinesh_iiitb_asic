@@ -1,5 +1,6 @@
 # Dinesh_iiitb_asic
 
+[week 0](#week_0)
 
 [Day 0](#day-0)
 
@@ -13,6 +14,12 @@
 
 [Day 5](#day-5)
 
+[week 1](#week_1)
+
+
+[Day 0](#day-0)
+ 
+# week_0
 
 ## Day 0
 
@@ -960,6 +967,10 @@ In the directory of the verilog files, I used the above commands to synthesize a
 ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/f467c2f5-a99b-4413-b2a4-ff64ce3ee183)
 
 </details>
+
+# week_1
+
+## Day_0
 
 
 ## References  
