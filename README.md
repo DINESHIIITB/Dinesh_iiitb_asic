@@ -1004,6 +1004,23 @@ Run the program on the target hardware. The hardware's CPU fetches and executes 
 
  ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/3808de68-89e8-4d9d-bceb-d3ea9e2a637b)
 
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/e2daaf2f-d3e1-4f71-8e23-c2575ed7bf27)
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/782461c7-51df-4614-8058-3a7dcc89dd54)
+
+
+ ![image](https://github.com/DINESHIIITB/Dinesh_iiitb_asic/assets/140998565/03a045ae-ed9f-4578-bc07-bede663b6203)
+
+
+```
+ riscv64-unknown-elf-gcc -01 -mabi=lp64 march=rv64i -o sum1ton.o sum1ton.c
+ls -ltr sum1ton.o
+```
+
+
+
+
+
 
 
 
